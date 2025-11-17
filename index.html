@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Junk Haul</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body id="top">
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <img src="images/logo.jpg" alt="Global Junk Haul Logo" class="logo">
+      <a href="#quote-form" class="cta-button">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+<section class="hero fade-in">
+  <div class="hero-decor left-decor">
+    <i class="fas fa-couch"></i>
+    <i class="fas fa-trash-alt"></i>
+  </div>
+
+  <div class="hero-content">
+    <h1>Global Junk Haul</h1>
+    <p>Fast, affordable junk removal in Palatine and Northwest Suburbs.</p>
+    <a href="#quote-form" class="cta-button">Claim Your $30 Off</a>
+  </div>
+
+  <div class="hero-decor right-decor">
+    <i class="fas fa-recycle"></i>
+    <i class="fas fa-dumpster"></i>
+  </div>
+</section>
+
+<section class="benefits-section fade-in">
+  <div class="benefits-layout">
+    <div class="benefits-image">
+      <img src="images/sameday.JPG" alt="Customer or cleanup image left">
+    </div>
+    <div class="benefits-content">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><i class="fas fa-shield-alt"></i> Licensed & Insured</li>
+        <li><i class="fas fa-truck-moving"></i> Same-Day Service</li>
+        <li><i class="fas fa-dollar-sign"></i> Transparent Pricing</li>
+        <li><i class="fas fa-recycle"></i> Eco-Friendly Disposal</li>
+      </ul>
+    </div>
+    <div class="benefits-image">
+      <img src="images/extra.JPG" alt="Customer or cleanup image right">
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+  <section class="services fade-in">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item fade-in">
+        🛋️ Furniture Removal
+        <img src="images/furniture.JPG" alt="Furniture Removal Before and After" class="service-image">
+      </div>
+      <div class="service-item fade-in">
+        🧹 Garage Cleanouts
+        <img src="images/garageclean.JPG" alt="Garage Cleanout Before and After" class="service-image">
+      </div>
+      <div class="service-item fade-in">
+        🏠 Basement Cleanouts
+        <img src="images/basement.JPG" alt="Basement Cleanout Before and After" class="service-image">
+      </div>
+      <div class="service-item fade-in">
+        🛠️ Construction Debris
+        <img src="images/debris.png" alt="Construction Debris Removal Before and After" class="service-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section id="quote-form" class="fade-in">
+  <h2>Get Your Free Quote</h2>
+  <img src="images/promo.jpg" alt="$30 Off Promo for First 10 Customers" class="promo-banner">
+
+  <div class="quote-form-wrapper">
+  <form name="quote" method="POST" data-netlify="true" class="quote-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="location" placeholder="Service Location" required>
+    <textarea name="details" placeholder="What do you need hauled?" required></textarea>
+    <button type="submit" class="cta-button">Submit</button>
+  </form>
+</div>
+</section>
+
+  <!-- Footer -->
+  <footer class="site-footer fade-in">
+    <p>© 2025 <strong>Global Junk Haul</strong>. All rights reserved.</p>
+    <p>Contact us: <a href="tel:7732269113">773-226-9113</a> | <a href="mailto:globaljunkhaul@gmail.com">globaljunkhaul@gmail.com</a></p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top" title="Back to Top">↑</a>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fader => observer.observe(fader));
+  </script>
+
+</body>
+</html>

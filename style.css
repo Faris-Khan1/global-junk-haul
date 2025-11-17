@@ -1,0 +1,322 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Base Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a1f3d;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: 
+    linear-gradient(to right, rgba(10, 31, 61, 0.9), rgba(18, 52, 86, 0.9)),
+    url('images/cityline.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background-color: #00a859;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #00d472;
+  box-shadow: 0 0 10px #00d472;
+}
+
+/* Section Layouts */
+.benefits, .services, #quote-form {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section {
+  border-bottom: 1px solid #1c355c;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+/* Sticky Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #0a1f3d;
+  padding: 15px 20px;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Promo Banner Styling */
+.promo-banner {
+  max-width: 320px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Benefits Section with Side Images */
+.benefits-section {
+  padding: 40px 20px;
+  background: linear-gradient(to right, rgba(10, 31, 61, 0.9), rgba(18, 52, 86, 0.9)),
+              url('images/Garage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+.benefits-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.benefits-content {
+  max-width: 300px;
+  text-align: center;
+}
+
+.benefits-content h2 {
+  margin-bottom: 20px;
+}
+
+.benefits-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-content li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.benefits-image img {
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-image img {
+    max-width: 100%;
+  }
+}
+
+/* Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Service Cards */
+.service-item {
+  background-color: #123456;
+  padding: 20px;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* Service Images */
+.service-image {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.services {
+  padding: 40px 20px;
+  background: linear-gradient(to right, rgba(10, 31, 61, 0.9), rgba(18, 52, 86, 0.9)),
+              url('images/junk.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Quote Form Styling */
+#quote-form {
+  background: linear-gradient(to right, rgba(10, 31, 61, 0.9), rgba(18, 52, 86, 0.9)),
+              url('images/nature.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.quote-form-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
+  color: #888;
+}
+
+.quote-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .hero, .benefits, .services, #quote-form {
+    padding: 30px 15px;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  .cta-button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* Angled Section Dividers */
+.angled-divider {
+  height: 60px;
+  background: linear-gradient(to right, #0a1f3d 50%, #123456 50%);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.angled-divider.reverse {
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* Font Awesome Icon Styling */
+.benefits-content li i {
+  margin-right: 8px;
+  color: #00d472;
+}
+
+/* Footer Styling */
+.site-footer {
+  background-color: #081a33;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  margin-top: 60px;
+  border-top: 1px solid #1c355c;
+}
+
+.site-footer a {
+  color: #00d472;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #00a859;
+  color: white;
+  font-size: 24px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #00d472;
+  transform: scale(1.1);
+}
